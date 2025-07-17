@@ -1,0 +1,58 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: #004080;
+  color: white;
+  padding: 15px;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 15px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+section {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+h2 {
+  color: #004080;
+}
+
+.producto {
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 20px;
+  background: white;
+}
+
+button {
+  background: #004080;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #0066cc;
+}
+
+footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 40px;
+}
