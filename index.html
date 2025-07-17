@@ -2,60 +2,71 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8" />
-  <title>Juan Ciencia - Web Oficial</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juan Ciencia</title>
   <link rel="stylesheet" href="estilos.css" />
 </head>
 <body>
+
   <header>
-    <h1>Juan Ciencia</h1>
-    <nav>
-      <a href="#videos">Videos</a>
-      <a href="#tienda">Tienda</a>
-      <a href="#sobre-mi">Sobre mí</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
+    <div class="container">
+      <h1>Juan Ciencia</h1>
+      <nav id="navbar">
+        <a href="#videos">Videos</a>
+        <a href="#tienda">Tienda</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    </div>
   </header>
 
-  <section id="videos">
-    <h2>Mis Videos</h2>
-    <!-- Aquí insertas videos de YouTube -->
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO1" frameborder="0" allowfullscreen></iframe>
-    <iframe width="560" height="315" src="https://www.youtube.com/embed/ID_DEL_VIDEO2" frameborder="0" allowfullscreen></iframe>
-  </section>
+  <main>
+    <section id="videos" class="seccion">
+      <h2>🎥 Mis Videos</h2>
+      <div class="video-grid">
+        <iframe src="https://www.youtube.com/embed/ID_VIDEO1" frameborder="0" allowfullscreen></iframe>
+        <iframe src="https://www.youtube.com/embed/ID_VIDEO2" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </section>
 
-  <section id="tienda">
-    <h2>Tienda - ebooks</h2>
-    <div class="producto">
-      <h3>Ebook: Ciencia para Todos</h3>
-      <p>Un ebook sencillo para entender la ciencia en casa.</p>
-      <button onclick="comprarEbook('ciencia-para-todos.pdf')">Comprar - $5</button>
-    </div>
-    <div class="producto">
-      <h3>Ebook: Tecnología Fácil</h3>
-      <p>Aprende tecnología paso a paso.</p>
-      <button onclick="comprarEbook('tecnologia-facil.pdf')">Comprar - $7</button>
-    </div>
-  </section>
+    <section id="tienda" class="seccion">
+      <h2>📚 Tienda - eBooks</h2>
+      <div class="productos">
+        <div class="producto">
+          <h3>Ciencia para Todos</h3>
+          <p>Ebook educativo para jóvenes curiosos.</p>
+          <a class="boton" href="https://gumroad.com/l/ebook1" target="_blank">Comprar - $5</a>
+        </div>
+        <div class="producto">
+          <h3>Tecnología Fácil</h3>
+          <p>Una guía práctica para principiantes.</p>
+          <a class="boton" href="https://gumroad.com/l/ebook2" target="_blank">Comprar - $7</a>
+        </div>
+      </div>
+    </section>
 
-  <section id="sobre-mi">
-    <h2>Sobre mí</h2>
-    <p>Hola, soy Juan, apasionado por la ciencia, la tecnología y la educación. Aquí comparto mis videos y recursos.</p>
-  </section>
+    <section id="sobre-mi" class="seccion">
+      <h2>👨‍🔬 Sobre mí</h2>
+      <p>¡Hola! Soy Juan, apasionado por la ciencia, la tecnología y la educación. Me encanta compartir conocimientos a través de videos, ebooks y clases. Estoy comprometido con una enseñanza divertida y accesible.</p>
+    </section>
 
-  <section id="contacto">
-    <h2>Contacto</h2>
-    <p>Email: juan@ejemplo.com</p>
-  </section>
+    <section id="contacto" class="seccion">
+      <h2>📩 Contacto</h2>
+      <form action="https://formspree.io/f/your-form-id" method="POST">
+        <input type="text" name="nombre" placeholder="Tu nombre" required />
+        <input type="email" name="email" placeholder="Tu correo" required />
+        <textarea name="mensaje" rows="4" placeholder="Tu mensaje..." required></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </section>
+  </main>
 
   <footer>
-    <p>&copy; 2025 Juan Ciencia</p>
+    <p>&copy; 2025 Juan Ciencia | Todos los derechos reservados</p>
   </footer>
 
-  <script>
-    function comprarEbook(nombreArchivo) {
-      alert('Gracias por comprar el ebook: ' + nombreArchivo + '. En breve te enviaremos el enlace de descarga.');
-      // Aquí podrías integrar un sistema real de pagos o descarga
-    }
-  </script>
+  <script src="scripts.js"></script>
 </body>
 </html>
+
