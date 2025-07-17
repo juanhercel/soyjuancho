@@ -1,58 +1,148 @@
-body {
-  font-family: Arial, sans-serif;
-  background: #fafafa;
-  color: #333;
+* {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f2f2f2;
+  color: #333;
+  line-height: 1.6;
+}
+
 header {
-  background: #004080;
+  background: #003366;
   color: white;
-  padding: 15px;
-  text-align: center;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.5rem;
 }
 
 nav a {
-  margin: 0 15px;
   color: white;
   text-decoration: none;
+  margin: 0 10px;
   font-weight: bold;
 }
 
-section {
-  max-width: 900px;
-  margin: 40px auto;
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+}
+
+main {
+  max-width: 1000px;
+  margin: 2rem auto;
   padding: 0 20px;
 }
 
-h2 {
-  color: #004080;
+.seccion {
+  margin-bottom: 3rem;
+}
+
+.video-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+iframe {
+  width: 100%;
+  height: 200px;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
 }
 
 .producto {
-  border: 1px solid #ddd;
-  padding: 15px;
-  margin-bottom: 20px;
   background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.boton {
+  background: #007acc;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+.boton:hover {
+  background: #005f99;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input, textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 button {
-  background: #004080;
+  background: #003366;
   color: white;
+  padding: 10px;
   border: none;
-  padding: 10px 15px;
-  cursor: pointer;
-}
-
-button:hover {
-  background: #0066cc;
+  border-radius: 5px;
 }
 
 footer {
   background: #222;
   color: white;
   text-align: center;
-  padding: 10px;
-  margin-top: 40px;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsive menu */
+@media (max-width: 768px) {
+  nav {
+    display: none;
+    flex-direction: column;
+    background: #004080;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+  }
+
+  nav a {
+    padding: 10px;
+    border-top: 1px solid #0066cc;
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
 }
